@@ -17,6 +17,12 @@ therefore is used also in the `Site Core` and `Site Asp`
 
 ![Architecture Diagram](Architecture.png)
 
+## Source Code
+
+- Contacts Api Source Code - https://github.com/mauriciogracia/Diceus-ContactsApi
+- Site ASP Source Code - https://github.com/mauriciogracia/Diceus-SiteAsp
+- Site Core Source Code - YOUR CURRENT LOCATION - https://github.com/mauriciogracia/Diceus-SiteCore
+
 ## User Documentation
 
 To Register a new user or login you can visit - https://siteasp-mgg.azurewebsites.net/
@@ -58,14 +64,6 @@ And here you can see that some contacts were deleted
 
 ![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/8a676df4-2315-4df2-b8b2-c32466772197)
 
-
-
-
-## Source Code
-
-- Contacts Api Source Code 
-- Site ASP Source Code
-- Site Code Source Code
 
 ## Token & Session sharing
 
