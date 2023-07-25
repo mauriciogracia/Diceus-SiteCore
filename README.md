@@ -21,7 +21,7 @@ therefore is used also in the `Site Core` and `Site Asp`
 
 - Contacts Api Source Code - https://github.com/mauriciogracia/Diceus-ContactsApi
 - Site ASP Source Code - https://github.com/mauriciogracia/Diceus-SiteAsp
-- Site Core Source Code - YOUR CURRENT LOCATION - https://github.com/mauriciogracia/Diceus-SiteCore
+- Site Core Source Code - This repository ;-)
 
 ## User Documentation
 
