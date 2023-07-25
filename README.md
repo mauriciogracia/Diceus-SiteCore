@@ -6,6 +6,17 @@ The following functionality was implemented in API and web sites
 - CRUD operations: Create, List, Edit, Delete Contacts - https://sitecore-mgg.azurewebsites.net/ 
 - Unit tests were written for the API
 
+## Architecture
+
+There is MSSQL database with two tables: `USERS` and `CONTACTS`, that have a relationship
+
+The only way reach the database is through the `ContactsApi` layer
+
+`RequestModel` contains the models that are used to make requests and receive results from the `ContactsApi`, 
+therefore is used also in the `Site Core` and `Site Asp`
+
+![Architecture Diagram](Architecture.png)
+
 ## User Documentation
 
 To Register a new user or login you can visit - https://siteasp-mgg.azurewebsites.net/
@@ -22,17 +33,13 @@ Once you login you will be shown this Welcome message and be able to continue to
 
 ![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/4c2e21d5-d2f1-4805-8273-ca550253bf87)
 
+Once you visit https://sitecore-mgg.azurewebsites.net/ you will see the list of the existing contacts for UserId = 1
 
-## Architecture
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/3e11692d-02cc-414f-8fd8-8dade8fe53e5)
 
-There is MSSQL database with two tables: `USERS` and `CONTACTS`, that have a relationship
+You can filter the list on the fly
 
-The only way reach the database is through the `ContactsApi` layer
-
-`RequestModel` contains the models that are used to make requests and receive results from the `ContactsApi`, 
-therefore is used also in the `Site Core` and `Site Asp`
-
-![Architecture Diagram](Architecture.png)
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/b573ca0a-d748-493d-8b07-ff07ea4066ee)
 
 ## Source Code
 
