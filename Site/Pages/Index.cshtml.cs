@@ -48,7 +48,7 @@ public class IndexModel : PageModel
                 //TODO return StatusCode((int)response.StatusCode, "API error");
             }
         }
-        catch (HttpRequestException ex)
+        catch (HttpRequestException)
         {
             // Handle any network-related errors
             //TODO return StatusCode(500, $"Network error: {ex.Message}");

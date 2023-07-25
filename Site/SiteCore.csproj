@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -16,13 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="RequestModel\RequestModel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="RequestModels">
-      <HintPath>..\ContactsApi-mgg\ContactsApi\bin\Release\net6.0\RequestModels.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\RequestModel\RequestModel.csproj" />
   </ItemGroup>
 
 </Project>
