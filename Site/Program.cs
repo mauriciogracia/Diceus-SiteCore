@@ -2,7 +2,7 @@ namespace SiteCore
 {
     public class Program
     {
-        public const string API_URL = "https://ContactsApi-mgg.azurewebsites.net/api/Contacts/";
+        public const string API_URL = "https://ContactsApi-mgg.azurewebsites.net/";
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
