@@ -33,13 +33,32 @@ Once you login you will be shown this Welcome message and be able to continue to
 
 ![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/4c2e21d5-d2f1-4805-8273-ca550253bf87)
 
-Once you visit https://sitecore-mgg.azurewebsites.net/ you will see the list of the existing contacts for UserId = 1
+Once you visit https://sitecore-mgg.azurewebsites.net/ you will see the list of the existing contacts for UserId = 1 
+(this is hardcoded but should be linked to the user that was logged in)
 
 ![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/3e11692d-02cc-414f-8fd8-8dade8fe53e5)
 
-You can filter the list on the fly
+You can search contacts by email, phone or name on the fly
 
 ![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/b573ca0a-d748-493d-8b07-ff07ea4066ee)
+
+You can edit any date of the contact
+
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/cd084f21-9503-4919-8c43-aabd681f2af6)
+
+You can add a contact
+
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/33f78df5-52c6-485c-867d-3f18e6d4ab45)
+
+Here you can see the edited and the added contact
+
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/7bedd19c-b848-468c-acd4-6299ef20002b)
+
+And here you can see that some contacts were deleted
+
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/8a676df4-2315-4df2-b8b2-c32466772197)
+
+
 
 
 ## Source Code
