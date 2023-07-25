@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\index.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="RequestModel\RequestModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="RequestModels">
+      <HintPath>..\ContactsApi-mgg\ContactsApi\bin\Release\net6.0\RequestModels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
