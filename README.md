@@ -8,6 +8,16 @@ The following functionality was implemented in API and web sites
 
 ## User Documentation
 
+To Register a new user or login you can visit - https://siteasp-mgg.azurewebsites.net/
+
+The username must be unique
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/8f2e08d4-eac6-41f5-b737-c9959099d5c7)
+If you already have a username and password, use the login option - https://siteasp-mgg.azurewebsites.net/Account/Login
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/ba737844-c207-489b-930f-45c59d42feb4)
+
+Once you login you will be shown this Welcome message and be able to continue to the SiteCore website (CRUD)
+![image](https://github.com/mauriciogracia/Diceus-SiteCore/assets/2321661/4c2e21d5-d2f1-4805-8273-ca550253bf87)
+
 
 ## Architecture
 
