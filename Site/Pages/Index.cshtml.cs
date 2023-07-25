@@ -8,7 +8,7 @@ namespace SiteCore.Pages;
 public class IndexModel : PageModel
 {
     public List<Contact> Contacts { get; set; } = new List<Contact>();
-    public IndexModel(ILogger<IndexModel> logger)
+    public IndexModel()
     {
     }
 
