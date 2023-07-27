@@ -12,9 +12,14 @@ public class IndexModel : PageModel
 
     public IndexModel()
     {
-        //string token = HttpContext.Request.Query["t"].ToString();
-        //userId = await GetUserIdBySessionAsync(token);
-        userId = 1;
+        // Call the async method to initialize the userId property
+        InitializeUserIdAsync().Wait();
+    }
+
+    private async Task InitializeUserIdAsync()
+    {
+        string token = HttpContext.Request.Query["t"].ToString();
+        userId = await GetUserIdBySessionAsync(token);
     }
 
     public async Task<IActionResult> OnGet(string searchText)
@@ -71,11 +76,13 @@ public class IndexModel : PageModel
         {
             try
             {
-                // Construct the URL for the GetUserIdBySession endpoint with the token
-                string getUserIdUrl = $"api/Users/GetUserIdBySession?token={sessionToken}";
+                // Create a UriBuilder to construct the URL for the GetUserIdBySession endpoint
+                var uriBuilder = new UriBuilder(Program.API_URL);
+                uriBuilder.Path = "api/Users/GetUserIdBySession";
+                uriBuilder.Query = $"token={sessionToken}";
 
                 // Send the GET request to the GetUserIdBySession endpoint
-                var response = await _httpClient.GetAsync(getUserIdUrl);
+                var response = await _httpClient.GetAsync(uriBuilder.Uri);
 
                 // Check if the request was successful (HTTP status code 200-299)
                 if (response.IsSuccessStatusCode)
