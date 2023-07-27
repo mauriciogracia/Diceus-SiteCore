@@ -27,6 +27,11 @@ public class IndexModel : PageModel
             // Call the async method to initialize the userId property
             await InitializeUserIdAsync();
 
+            if(userId == -1)
+            {
+                Response.Redirect("https://github.com/mauriciogracia/Diceus-SiteAsp");
+            }
+
             _httpClient.BaseAddress = new Uri(Program.API_URL);
 
             try

@@ -84,6 +84,35 @@ function initializeEventListeners() {
             });
         }
     });
+
+    // Function to handle the click event of the "Logout" button
+    document.getElementById("logoutButton").addEventListener("click", function () {
+        // Get the session token value from wherever it is stored
+        var sessionToken = "your-session-token"; // Replace this with the actual session token
+
+        // Configure the fetch request
+        fetch("/api/Users/EndSession", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "token=" + encodeURIComponent(sessionToken)
+        })
+            .then(response => {
+                if (response.ok) {
+                    // Request was successful, handle the response if needed
+                    console.log("Logout successful");
+                    location.href = "https://siteasp-mgg.azurewebsites.net/";
+                } else {
+                    // Request was not successful, handle the error
+                    console.log("Logout failed: " + response.status + " - " + response.statusText);
+                }
+            })
+            .catch(error => {
+                // Error occurred during the fetch request, handle the error
+                console.log("Error: " + error);
+            });
+    });
 }
 
 function initSearch() {
