@@ -88,15 +88,11 @@ function initializeEventListeners() {
     // Function to handle the click event of the "Logout" button
     document.getElementById("logoutButton").addEventListener("click", function () {
         // Get the session token value from wherever it is stored
-        var sessionToken = "your-session-token"; // Replace this with the actual session token
+        var sessionToken = getQueryStringValue("t");
 
         // Configure the fetch request
-        fetch("https://contactsapi-mgg.azurewebsites.net/api/Users/EndSession", {
+        fetch("https://contactsapi-mgg.azurewebsites.net/api/Users/EndSession?token=" + encodeURIComponent(sessionToken), {
             method: "DELETE",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: "token=" + encodeURIComponent(sessionToken)
         })
             .then(response => {
                 if (response.ok) {
@@ -115,6 +111,18 @@ function initializeEventListeners() {
     });
 }
 
+function getQueryStringValue(variable) {
+    // Get the full query string from the URL
+    const queryString = window.location.search;
+
+    // Create a new URLSearchParams object from the query string
+    const searchParams = new URLSearchParams(queryString);
+
+    // Get the value of the specified parameter ("t" in this case)
+    const value = searchParams.get(variable);
+
+    return value;
+}
 function initSearch() {
     if (searchTextElement) {
         searchTextElement.addEventListener("input", function () {
