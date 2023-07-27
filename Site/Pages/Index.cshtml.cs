@@ -12,13 +12,9 @@ public class IndexModel : PageModel
 
     public IndexModel()
     {
-        InitializeAsync().Wait();
-    }
-
-    public async Task InitializeAsync()
-    {
         string token = HttpContext.Request.Query["t"].ToString();
-        userId = await GetUserIdBySessionAsync(token);
+        //userId = await GetUserIdBySessionAsync(token);
+        userId = 1;
     }
 
     public async Task<IActionResult> OnGet(string searchText)
