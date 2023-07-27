@@ -91,7 +91,7 @@ function initializeEventListeners() {
         var sessionToken = "your-session-token"; // Replace this with the actual session token
 
         // Configure the fetch request
-        fetch("/api/Users/EndSession", {
+        fetch(apiUrl + "/api/Users/EndSession", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
