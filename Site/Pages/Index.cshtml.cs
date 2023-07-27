@@ -29,7 +29,7 @@ public class IndexModel : PageModel
 
             if(userId == -1)
             {
-                Response.Redirect("https://github.com/mauriciogracia/Diceus-SiteAsp");
+                Response.Redirect("https://siteasp-mgg.azurewebsites.net/");
             }
 
             _httpClient.BaseAddress = new Uri(Program.API_URL);
