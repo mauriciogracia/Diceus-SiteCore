@@ -92,7 +92,7 @@ function initializeEventListeners() {
 
         // Configure the fetch request
         fetch("https://contactsapi-mgg.azurewebsites.net/api/Users/EndSession", {
-            method: "POST",
+            method: "DELETE",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
