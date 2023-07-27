@@ -17,8 +17,6 @@ namespace RequestModels
             this.Phone = contactRequest.Phone; 
             this.Name = contactRequest.Name;
             this.UserId = contactRequest.UserId;
-
-            //TODO we might need to retrive the user from the userId and assign it to the User navigation property 
         }
     }
 }
