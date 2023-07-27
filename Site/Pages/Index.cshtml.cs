@@ -12,7 +12,7 @@ public class IndexModel : PageModel
 
     public IndexModel()
     {
-        string token = HttpContext.Request.Query["t"].ToString();
+        //string token = HttpContext.Request.Query["t"].ToString();
         //userId = await GetUserIdBySessionAsync(token);
         userId = 1;
     }
