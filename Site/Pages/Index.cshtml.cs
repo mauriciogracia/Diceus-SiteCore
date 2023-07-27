@@ -12,8 +12,7 @@ public class IndexModel : PageModel
 
     public IndexModel()
     {
-        // Call the async method to initialize the userId property
-        InitializeUserIdAsync().Wait();
+        
     }
 
     private async Task InitializeUserIdAsync()
@@ -25,7 +24,8 @@ public class IndexModel : PageModel
     public async Task<IActionResult> OnGet(string searchText)
     {
         using(HttpClient _httpClient = new HttpClient()) {
-            
+            // Call the async method to initialize the userId property
+            await InitializeUserIdAsync();
 
             _httpClient.BaseAddress = new Uri(Program.API_URL);
 
