@@ -5,18 +5,17 @@
 }
 
 <div class="text-center">
-    <h1>Contacts List for @Model.userId</h1>
-
-    <!-- CREATE Button -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Create Contact</button>
+    <h1>Contacts List for UserId = @Model.userId</h1>
 
     @if (Model.Contacts == null || Model.Contacts.Count == 0)
     {
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Create Contact</button>
         <p>No contacts found.</p>
     }
     else
     {
         <div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Create Contact</button>
             <label for="searchText">Search:</label>
             <input type="text" id="searchText" name="searchText" value="@Model.Request.Query["searchText"]" />
         </div>
