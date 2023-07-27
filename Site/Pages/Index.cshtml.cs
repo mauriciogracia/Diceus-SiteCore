@@ -8,6 +8,8 @@ namespace SiteCore.Pages;
 public class IndexModel : PageModel
 {
     public List<Contact> Contacts { get; set; } = new List<Contact>();
+    public int userId;
+
     public IndexModel()
     {
     }
@@ -16,7 +18,7 @@ public class IndexModel : PageModel
     {
         using(HttpClient _httpClient = new HttpClient()) {
             string token = HttpContext.Request.Query["t"].ToString();
-            int userId = await GetUserIdBySessionAsync(token);
+            userId = await GetUserIdBySessionAsync(token);
 
             _httpClient.BaseAddress = new Uri(Program.API_URL);
 
